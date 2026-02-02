@@ -70,8 +70,8 @@ class VisualCue(BaseModel):
 class ScriptScene(BaseModel):
     """A scene in the video script."""
 
-    scene_id: str  # Slug-based ID like "the_impossible_leap"
-    scene_type: str  # hook, context, explanation, insight, conclusion
+    scene_id: str | int  # Slug-based ID like "the_impossible_leap" or numeric
+    scene_type: str = "explanation"  # hook, context, explanation, insight, conclusion
     title: str
     voiceover: str
     visual_cue: VisualCue
